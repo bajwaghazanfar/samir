@@ -11,7 +11,6 @@ export default function Home() {
       <Navbar />
       <div className="w-full h-screen flex flex-col gap-5 bg-stone-100">
         <div className="w-full  flex flex-col items-center justify-start p-1 lg:w-4/5 lg:p-10 lg:items-start">
-          <h4 className="font-bold tracking-wide uppercase text-xl">Welcome</h4>
           <h1 className="text-5xl text-center font-thin lg:text-[90px] xl:text-[110px] 2xl:text-[130px] 3xl:text-[180px]  lg:text-left  ">
             We are a <span className="font-bold"> creative digital agency</span>
           </h1>
@@ -72,16 +71,18 @@ export default function Home() {
         </div>
 
         {/* End of hero */}
+
+        {/*  */}
         <div className="w-full h-auto flex-col justify-center items-center  bg-stone-100">
           <div className="w-full h-auto flex flex-col border-2 border-solid border-stone-100 border-t-0 border-l-0 border-r-0 pt-10 pb-10 lg:flex-row">
-            <div className="w-full  h-auto flex p-5 gap-5 flex-col items-start justify-start  lg:w-11/12 lg:p-10 ">
-              <h4 className="font-bold tracking-wide uppercase text-xl text-left">
+            <div className="w-full  h-auto flex p-5 gap-5 flex-col items-center justify-center  lg:w-11/12 lg:p-10 ">
+              <h4 className="font-bold tracking-wide uppercase text-xl text-center">
                 Services
               </h4>
-              <h1 className="text-3xl font-thin lg:text-[40px]  2xl:text-[60px]  text-left leading-none ">
+              <h1 className="text-3xl font-thin lg:text-[40px]  2xl:text-[60px]  text-center leading-none ">
                 Our Services
               </h1>
-              <p className="text-sm lg:text-base">
+              <p className="text-sm lg:text-base text-center">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
