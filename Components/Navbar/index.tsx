@@ -3,51 +3,77 @@
 import { useState } from "react";
 import { Spin as Hamburger } from "hamburger-react";
 import logo from "../../public/logo.png";
+import { motion, AnimatePresence } from "framer-motion";
+import { Merriweather } from "next/font/google";
+
 export const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="w-full h-auto pt-5 pb-5 pr-5 bg-transparent">
-      <div className="w-5/5 h-auto  items-center justify-between hidden lg:flex">
-        <div className="w-full   flex items-center justify-start lg:pl-10">
-          <img src="/logo.png" />
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a>Item 1</a>
+            </li>
+            <li>
+              <a>Parent</a>
+              <ul className="p-2">
+                <li>
+                  <a>Submenu 1</a>
+                </li>
+                <li>
+                  <a>Submenu 2</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>Item 3</a>
+            </li>
+          </ul>
         </div>
-        <div className="w-full h-auto flex items-center justify-end">
-          <li className="list-none">
-            <p className="text-white border-solid border-2 border-black rounded-full p-2 cursor-pointer">
-              <Hamburger size={30} color="black" />
-            </p>
-          </li>
-        </div>
+        <a className=" w-fit" href="/">
+          <img src="/logo.png" className="w-[180px]" />
+        </a>
       </div>
-      <div className="w-full h-auto flex items-center justify-between p-2 lg:hidden">
-        <img src="/logo.png" className="w-[200px]" />
-        <button
-          onClick={() => {
-            setOpen(!open);
-          }}
-        >
-          <Hamburger size={30} color="white" />
-        </button>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 relative z-[100]">
+          <li>
+            <details>
+              <summary>Case Studies</summary>
+              <ul className="p-2">
+                <li>
+                  <a href="/work">All case studies</a>
+                </li>
+                <li>
+                  <a href="/casestudy/sportband">ActiveCore</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
       </div>
-      <div
-        className={`w-full h-screen absolute z-10 ${
-          open ? "flex" : "hidden"
-        } flex-col bg-black  lg:hidden `}
-      >
-        <div className="w-full h-full flex flex-col justify-evenly items-end p-5">
-          <li className="list-none">
-            <h3 className="text-white text-2xl">Home</h3>
-          </li>
-          <li className="list-none">
-            <h3 className="text-white text-2xl">About Us</h3>
-          </li>
-          <li className="list-none">
-            <h3 className="text-white text-2xl">Products</h3>
-          </li>
-          <li className="list-none">
-            <h3 className="text-white text-2xl">Contact Us</h3>
-          </li>
-        </div>
+      <div className="navbar-end">
+        <a className="btn bg-violet-200 ">Book a Call</a>
       </div>
     </div>
   );

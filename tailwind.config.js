@@ -1,12 +1,16 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     extend: {
+      
       screens: {
         "3xl": "2000px",
       },
@@ -22,11 +26,20 @@ module.exports = {
         "primary-900": "#164e63",
       },
       fontFamily: {
-        wdc: ["var(--font-Roboto)", "Poppins", ...fontFamily.sans],
+        fontFamily: {
+          inter: ['Inter', 'sans-serif'],
+          poppins: ['Poppins', 'sans-serif'],
+          'display': ['Oswald', ]
+
+
+        },
       },
       backgroundImage: (theme) => ({
-        landing:
-          "url('https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg?auto=compress&cs=tinysrgb&w=6000&h=5000&dpr=1')",
+        abstract:
+          "url(/bg.png)",
+          abstract_wide:
+          "url(/bg-wide.png) ",
+          city:  "url(/bg-city.jpg) ",
       }),
       boxShadow: {
         oval: "0px 0px 38px -3px #EBF7FF;",
@@ -37,5 +50,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

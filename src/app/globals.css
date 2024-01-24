@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 html {
-  background-color: #f5f5f4;
+
+  scroll-behavior: smooth;
   @media screen and (min-width: 1024px) and (max-width: 2600px) {
-    margin-left: 50px;
-    margin-right: 50px;
+
   }
 }
