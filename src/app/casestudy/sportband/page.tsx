@@ -41,7 +41,7 @@ const ActiveCore = () => {
                       />
                     </svg>
                     <p className="text-white font-semibold text-sm underline">
-                      2 minute read{" "}
+                      2 minute read
                     </p>
                   </div>
                   <div className="w-full h-auto flex justify-center items-center">
@@ -52,16 +52,16 @@ const ActiveCore = () => {
                 </div>
                 <div className="w-full h-auto flex justify-center items-center gap-3 lg:w-3/4">
                   <h1 className="text-3xl text-center text-white   font-semibold   leading-snug tracking-normal dark:text-white  lg:text-[60px] xl:text-[60px] 2xl:text-[100px] 3xl:text-[180px]    ">
-                    E-commerce Trailblazer: Active Core's Success Unleashes
+                    E-commerce Trailblazer: Active Cores Success Unleashes
                     Six-Figure Triumph
                   </h1>
                 </div>
                 <div className="w-full h-auto flex justify-center items-center gap-3 lg:w-2/4">
                   <p className="text-center text-white text-xl lg:text-xl">
                     T3 Collingwood, located at 36-52 Wellington Street,
-                    Collingwood in Melbourne, is the city’s tallest timber
-                    hybrid office building and the first application of Hines’
-                    T3 concept in Australia.
+                    Collingwood in Melbourne, is the citys tallest timber hybrid
+                    office building and the first application of Hines T3
+                    concept in Australia.
                   </p>
                 </div>
               </div>
@@ -73,9 +73,9 @@ const ActiveCore = () => {
             <div className="w-full h-auto lg:w-1/2 pt-10">
               <p className="text-black text-lg font-light  tracking-wide">
                 T3 Collingwood, located at 36-52 Wellington Street, Collingwood
-                in Melbourne, is the city’s tallest timber hybrid office
-                building and the first application of Hines’ T3 concept in
-                Australia. <br />
+                in Melbourne, is the citys tallest timber hybrid office building
+                and the first application of Hines T3 concept in Australia.{" "}
+                <br />
                 <br />
                 The building has 15 levels, with nine of these levels featuring
                 a cross-laminated timber (CLT) structure. In comparison to

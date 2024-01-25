@@ -53,7 +53,7 @@ export default function Home() {
                 Stay ahead of the curve with our forward thinking
               </h1>
               <div className="w-full flex items-center flex-col justify-center h-full gap-10 lg:w-4/5 lg:items-start  lg:justify-start ">
-                <div className="w-4/5 flex flex-col justify-between h-full ga-">
+                <div className="w-4/5 flex flex-col justify-between h-full ">
                   <p className=" lg:text-lg text-gray-500 tracking-normal text-center  text-sm lg:text-left dark:text-gray-300">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -233,12 +233,12 @@ export default function Home() {
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
               <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black">
-                We've developed{" "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+                Weve developed
+                <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   specific use cases
-                </span>{" "}
-                where our approach and expertise truly helps businesses to{" "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+                </span>
+                where our approach and expertise truly helps businesses to
+                <span className=" ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   excel
                 </span>
               </h1>
@@ -336,13 +336,13 @@ export default function Home() {
         <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black">
-                We've developed{" "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black ">
+                Weve developed
+                <span className=" ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   specific use cases
-                </span>{" "}
-                where our approach and expertise truly helps businesses to{" "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+                </span>
+                where our approach and expertise truly helps businesses to
+                <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   excel
                 </span>
               </h1>
@@ -380,11 +380,11 @@ export default function Home() {
         <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row-  lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full lg:text-left   text-black">
-                Don't just take our{" "}
+              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full lg:text-left   text-black flex gap-2">
+                Dont just take our
                 <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
                   word
-                </span>{" "}
+                </span>
                 for it.
               </h1>
             </div>
@@ -403,9 +403,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -418,9 +418,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -433,9 +433,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -448,9 +448,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -463,9 +463,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -478,9 +478,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -493,9 +493,9 @@ export default function Home() {
               className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
             >
               <h2 className=" font-light text-2xl  tracking-normal">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam"
+                enim ad minim veniam
               </h2>
               <div className="w-full h-auto flex flex-col ">
                 <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
@@ -511,10 +511,10 @@ export default function Home() {
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row-  lg:w-1/2 lg:justify-start lg:items-start">
               <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full lg:text-left   text-black">
-                Looking to take your business to the{" "}
+                Looking to take your business to the
                 <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
                   next level?
-                </span>{" "}
+                </span>
               </h1>
             </div>
           </div>
@@ -522,7 +522,6 @@ export default function Home() {
         <div className="w-full h-full flex items-start justify-start flex-col lg:flex-row p-5 pt-10 lg:p-0 lg:py-10">
           <div className="w-full lg:w-1/2 h-full flex flex-col py-5 gap-3">
             <div>
-              {" "}
               <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-violet-500">
                 Schedule your call with Samir
               </h4>
@@ -537,7 +536,7 @@ export default function Home() {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
 
             <p className="text-sm text-gray-500 ">
@@ -547,7 +546,7 @@ export default function Home() {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-violet-500">
               This audit call is perfect for:
@@ -573,7 +572,7 @@ export default function Home() {
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  mollit anim id est laborum.
                 </p>
               </div>
             </div>
@@ -598,7 +597,7 @@ export default function Home() {
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  mollit anim id est laborum.
                 </p>
               </div>
             </div>
@@ -623,7 +622,7 @@ export default function Home() {
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  mollit anim id est laborum.
                 </p>
               </div>
             </div>
@@ -648,7 +647,7 @@ export default function Home() {
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  mollit anim id est laborum.
                 </p>
               </div>
             </div>
@@ -673,7 +672,7 @@ export default function Home() {
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  mollit anim id est laborum.
                 </p>
               </div>
             </div>

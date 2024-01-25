@@ -65,12 +65,12 @@ const Work = () => {
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
               <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black">
-                We've developed
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+                Weve developed
+                <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   specific use cases
                 </span>
-                where our approach and expertise truly helps businesses to{" "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
+                where our approach and expertise truly helps businesses to
+                <span className=" ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   excel
                 </span>
               </h1>
@@ -95,7 +95,7 @@ const Work = () => {
                 />
                 <div className="w-full h-auto flex flex-col gap-6">
                   <h1 className="text-3xl font-extrabold ">
-                    E-commerce Trailblazer: Active Core's Success Unleashes
+                    E-commerce Trailblazer: Active Cores Success Unleashes
                     Six-Figure Triumph
                   </h1>
                   <p className="text-lg font-normal text-black">
