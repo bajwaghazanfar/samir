@@ -70,7 +70,9 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-violet-200 ">Book a Call</a>
+        <a className="btn bg-violet-200 " href="#ContactForm">
+          Book a Call
+        </a>
       </div>
     </div>
   );
