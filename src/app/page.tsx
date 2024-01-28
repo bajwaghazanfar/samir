@@ -6,10 +6,17 @@ import ShuffleHero, {
   ShuffleGrid,
 } from "../../Components/SquarePhotoGrid/SquarePhotoGrid";
 import CountUp from "react-countup";
-import { color, motion } from "framer-motion";
+import { animate, color, motion, useInView } from "framer-motion";
 import Footer from "../../Components/Footer/Footer";
+import RevealText from "../../Components/RevealText/RevealText";
+import Subheading from "../../Components/Subheading/Subheading";
+import Countup from "../../Components/Countup/Countup";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const testimonialRef = useRef(null);
+  const chatBubble = useRef(null);
+  const isInView = useInView(testimonialRef);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,63 +32,67 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const randomColorGenerator = (): string => {
-    const colors: string[] = [
-      "navy",
-      "violet",
-      "slate",
-      "gray",
-      "sky",
-      "amber",
-      "emerald",
-      "cyan",
-      "blue",
-      "indigo",
-    ];
-    var item = colors[Math.floor(Math.random() * colors.length)];
+  useEffect(() => {
+    if (isInView) {
+      animate(chatBubble.current, { opacity: 1, y: 0 }, { duration: 1 });
+    }
+  }, [isInView]);
 
-    return `${item}`;
-  };
   return (
     <>
-      <main className=" w-full h-auto lg:pl-[50px] lg:pr-[50px]">
+      <main className=" w-full h-auto lg:pl-[50px] lg:pr-[50px] ">
         <Navbar />
-        <div className="w-full h-full flex flex-col lg:py-10">
+        <div className="w-full h-full flex flex-col lg:py-10 mt-10 lg:mt-0">
           <div className="w-full  flex flex-col items-center justify-start  lg:w-full lg:flex-row lg:gap-8">
             <div className="w-full h-full lg:w-1/2 lg:h-full flex-col flex justify-evenly gap-6">
-              <h1 className="text-5xl text-center   font-semibold tracking-normal dark:text-white  lg:text-[60px] xl:text-[80px] 2xl:text-[130px] 3xl:text-[180px]  lg:text-left  ">
-                Stay ahead of the curve with our forward thinking
-              </h1>
+              <RevealText
+                lines={[
+                  "Stay ahead of",
+                  "the curve with",
+                  "our forward",
+                  "thinking",
+                ]}
+              />
               <div className="w-full flex items-center flex-col justify-center h-full gap-10 lg:w-4/5 lg:items-start  lg:justify-start ">
-                <div className="w-4/5 flex flex-col justify-between h-full ">
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8, type: "tween" }}
+                  className="w-4/5 flex flex-col justify-center items-center h-full gap-5"
+                >
                   <p className=" lg:text-lg text-gray-500 tracking-normal text-center  text-sm lg:text-left dark:text-gray-300">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   </p>
-                </div>
-                <DottedButton>
-                  <p className="flex w-auto text-black gap-5">
-                    Find out more
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </p>
-                </DottedButton>
+                  <DottedButton animation={false} inViewportView={true}>
+                    <p className="flex w-auto text-black gap-5">
+                      Find out more
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </p>
+                  </DottedButton>
+                </motion.div>
               </div>
             </div>
-            <div className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  relative">
-              <div className="w-fit justify-evenly h-full flex   gap-2 relative ">
-                <div className="w-1/2 h-full  relative">
+            <motion.div
+              initial={{ scale: 0, borderRadius: "100%" }}
+              animate={{ scale: 1, borderRadius: "0%" }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  bg-white overflow-hidden "
+            >
+              <div className="w-full h-full flex">
+                <div className="w-1/2 h-full  ">
                   <video
                     src="/video2.mp4"
                     muted
@@ -90,13 +101,13 @@ export default function Home() {
                     className=" w-full h-full rounded-tl-full"
                   />
                 </div>
-                <div className="w-1/2 h-full bg-gray-100 dark:bg-slate-900 flex flex-col p-5  gap-7 relative">
+                <div className="w-1/2 h-auto bg-gray-100 dark:bg-slate-900 flex flex-col p-5  gap-7 ">
                   <h1 className="text-8xl">210+</h1>
                   <p>
                     ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation
                   </p>
-                  <DottedButton>
+                  <DottedButton animation={false} inViewportView={false}>
                     <p className="w-auto flex gap-2 dark:text-black">
                       Learn More
                       <svg
@@ -115,6 +126,7 @@ export default function Home() {
                   </DottedButton>
                 </div>
               </div>
+
               <div className="w-full h-auto flex justify-center items-center mt-5">
                 <video
                   src="/video.mp4"
@@ -124,20 +136,25 @@ export default function Home() {
                   className="w-full h-[200px] rounded-md object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-center">
-            <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row ">
-              <h1 className="text-3xl  font-bold leading-none tracking-tight lg:text-5xl lg:w-full ">
-                Provide the best services with {"   "}
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
-                  out of the box
-                </span>
-                {"   "}ideas
-              </h1>
-            </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-center"
+          >
+            <Subheading
+              text={[
+                { text: "Ready to", underlined: false },
+                { text: "fuck", underlined: true },
+                { text: "shit up", underlined: false },
+                { text: "fuck", underlined: true },
+              ]}
+            />
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row ">
               <div className="w-auto h-auto  bg-violet-200 p-5 rounded-xl">
                 <p className="text-sm text-black text-pretty tracking-wide ">
@@ -152,99 +169,79 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-center">
+          </motion.div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-center"
+          >
             <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
-              <CountUp start={0} end={4} delay={0}>
-                {({ countUpRef }) => (
-                  <div className="w-full flex h-full text-center items-center justify-center">
-                    <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                      <span
-                        className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center"
-                        ref={countUpRef}
-                      />
-                      <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                        +
-                      </span>
-                    </h1>
-                  </div>
-                )}
-              </CountUp>
+              <div className="w-full flex h-full text-center items-center justify-center">
+                <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center" />
+                  <Countup number={4} />
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                    +
+                  </span>
+                </h1>
+              </div>
+
+              <p className="text-lg text-gray-200">Years Of Experience</p>
+            </div>
+
+            <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
+              <div className="w-full flex h-full text-center items-center justify-center">
+                <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center" />
+                  <Countup number={4} />
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                    +
+                  </span>
+                </h1>
+              </div>
+
+              <p className="text-lg text-gray-200">Years Of Experience</p>
+            </div>
+
+            <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
+              <div className="w-full flex h-full text-center items-center justify-center">
+                <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center" />
+                  <Countup number={4} />
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                    +
+                  </span>
+                </h1>
+              </div>
+
               <p className="text-lg text-gray-200">Years Of Experience</p>
             </div>
             <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
-              <CountUp start={0} end={4} delay={0}>
-                {({ countUpRef }) => (
-                  <div className="w-full flex h-full text-center items-center justify-center">
-                    <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                      <span
-                        className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center"
-                        ref={countUpRef}
-                      />
-                      <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                        +
-                      </span>
-                    </h1>
-                  </div>
-                )}
-              </CountUp>
+              <div className="w-full flex h-full text-center items-center justify-center">
+                <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center" />
+                  <Countup number={4} />
+                  <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
+                    +
+                  </span>
+                </h1>
+              </div>
+
               <p className="text-lg text-gray-200">Years Of Experience</p>
             </div>
-            <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
-              <CountUp start={0} end={4} delay={0}>
-                {({ countUpRef }) => (
-                  <div className="w-full flex h-full text-center items-center justify-center">
-                    <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                      <span
-                        className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center"
-                        ref={countUpRef}
-                      />
-                      <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                        +
-                      </span>
-                    </h1>
-                  </div>
-                )}
-              </CountUp>
-              <p className="text-lg text-gray-200">Years Of Experience</p>
-            </div>
-            <div className="w-full  h-full bg-abstract  flex flex-col justify-center items-center gap-2 p-10 rounded-2xl lg:w-5/12">
-              <CountUp start={0} end={4} delay={0}>
-                {({ countUpRef }) => (
-                  <div className="w-full flex h-full text-center items-center justify-center">
-                    <h1 className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                      <span
-                        className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center"
-                        ref={countUpRef}
-                      />
-                      <span className="text-3xl  font-bold lg:text-5xl lg:w-full  text-white text-center">
-                        +
-                      </span>
-                    </h1>
-                  </div>
-                )}
-              </CountUp>
-              <p className="text-lg text-gray-200">Years Of Experience</p>
-            </div>
-          </div>
+          </motion.div>
         </div>
         {/* New section Services */}
-        <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
-            <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black">
-                Weve developed
-                <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
-                  specific use cases
-                </span>
-                where our approach and expertise truly helps businesses to
-                <span className=" ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
-                  excel
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Subheading
+          text={[
+            { text: "Ready to", underlined: false },
+            { text: "fuck", underlined: true },
+            { text: "shit up", underlined: false },
+            { text: "fuck", underlined: true },
+          ]}
+        />
         {/* Section 1 */}
         <div className="w-full h-auto flex flex-col items-center justify-center ">
           <motion.div
@@ -252,7 +249,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="w-full h-auto flex flex-col items-center justify-center lg:flex-row"
+            className="w-full h-auto flex flex-col-reverse items-center justify-center lg:flex-row"
           >
             <motion.div
               variants={childVariants}
@@ -278,7 +275,7 @@ export default function Home() {
                   laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                   irure dolor in reprehenderit in voluptate velit esse
                 </p>
-                <DottedButton>
+                <DottedButton animation={true} inViewportView={true}>
                   <p>Explore</p>
                 </DottedButton>
               </div>
@@ -308,7 +305,7 @@ export default function Home() {
                   laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                   irure dolor in reprehenderit in voluptate velit esse
                 </p>
-                <DottedButton>
+                <DottedButton animation={true} inViewportView={true}>
                   <p>Explore</p>
                 </DottedButton>
               </div>
@@ -333,22 +330,14 @@ export default function Home() {
         <div></div>
       </div> */}
 
-        <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
-            <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black ">
-                Weve developed
-                <span className=" ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
-                  specific use cases
-                </span>
-                where our approach and expertise truly helps businesses to
-                <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
-                  excel
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Subheading
+          text={[
+            { text: "Ready to", underlined: false },
+            { text: "fuck", underlined: true },
+            { text: "shit up", underlined: false },
+            { text: "fuck", underlined: true },
+          ]}
+        />
         {/* Start of Carousel  */}
         <div className="carousel w-full rounded-2xl">
           <div id="slide1" className="carousel-item relative w-full">
@@ -377,129 +366,133 @@ export default function Home() {
         </div>
         {/* End of carousel */}
         {/* Start of testimonials  */}
-        <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
-            <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row-  lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full lg:text-left   text-black flex gap-2">
-                Dont just take our
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
-                  word
-                </span>
-                for it.
-              </h1>
-            </div>
-          </div>
+        <Subheading
+          text={[
+            { text: "Our results", underlined: false },
+            { text: "speak volumes", underlined: true },
+          ]}
+        />
+        <div
+          ref={chatBubble}
+          className="w-full h-auto flex justify-start items-start gap-5 p-5"
+        >
+          <p className=" text-gray-400 flex gap-5 text-xl">
+            Swipe to view all testimonials
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+              animate={{
+                x: "20px",
+              }}
+              transition={{ repeat: Infinity, duration: 1 }}
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              />
+            </motion.svg>
+          </p>
         </div>
 
-        <div className="carousel carousel-center w-full p-4 space-x-4 rounded-box">
-          <div className="carousel-item">
-            <img
-              src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
-              className="rounded-box"
-            />
-          </div>
-          <div className="carousel-item shadow-xl rounded-box">
+        <div
+          className="carousel carousel-center w-full p-4 space-x-4 "
+          ref={testimonialRef}
+        >
+          <div className="carousel-item   rounded-lg">
             <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
+              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col bg-black`}
             >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
+              <div className="w-full h-auto flex flex-col p-2 bg-gray-800 rounded-lg">
+                <div className="flex items-center mb-2">
+                  <div className="w-6 h-6 rounded-full bg-blue-500 mr-2"></div>
+                  <h1 className="text-xl font-extrabold text-white">
+                    Samir Baloushi
+                  </h1>
+                </div>
+                <p className="text-white mb-2">Cloud Media</p>
+                <div className="bg-gray-700 p-3 rounded-md">
+                  <h2 className="font-light text-xl text-white tracking-normal">
+                    <span className="text-4xl text-white">"</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam
+                    <span className="text-4xl text-white">"</span>
+                  </h2>
+                </div>
+              </div>
+
+              <div className="w-full h-full overflow-hidden rounded-md">
+                <img
+                  src="/bg-city.jpg"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
-          <div className="carousel-item shadow-xl rounded-box">
+
+          <div className="carousel-item   rounded-lg">
             <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
+              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col bg-black`}
             >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
+              <div className="w-full h-auto flex flex-col p-2 bg-gray-800 rounded-lg">
+                <div className="flex items-center mb-2">
+                  <div className="w-6 h-6 rounded-full bg-blue-500 mr-2"></div>
+                  <h1 className="text-xl font-extrabold text-white">
+                    Samir Baloushi
+                  </h1>
+                </div>
+                <p className="text-white mb-2">Cloud Media</p>
+                <div className="bg-gray-700 p-3 rounded-md">
+                  <h2 className="font-light text-xl text-white tracking-normal">
+                    <span className="text-4xl text-white">"</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam
+                    <span className="text-4xl text-white">"</span>
+                  </h2>
+                </div>
+              </div>
+
+              <div className="w-full h-full overflow-hidden rounded-md">
+                <img
+                  src="/bg-city.jpg"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
-          <div className="carousel-item shadow-xl rounded-box">
+
+          <div className="carousel-item   rounded-lg">
             <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
+              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col bg-black`}
             >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
+              <div className="w-full h-auto flex flex-col p-2 bg-gray-800 rounded-lg">
+                <div className="flex items-center mb-2">
+                  <div className="w-6 h-6 rounded-full bg-blue-500 mr-2"></div>
+                  <h1 className="text-xl font-extrabold text-white">
+                    Samir Baloushi
+                  </h1>
+                </div>
+                <p className="text-white mb-2">Cloud Media</p>
+                <div className="bg-gray-700 p-3 rounded-md">
+                  <h2 className="font-light text-xl text-white tracking-normal">
+                    <span className="text-4xl text-white">"</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam
+                    <span className="text-4xl text-white">"</span>
+                  </h2>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="carousel-item shadow-xl rounded-box">
-            <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
-            >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item shadow-xl rounded-box">
-            <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
-            >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item shadow-xl rounded-box">
-            <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
-            >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item shadow-xl rounded-box">
-            <div
-              className={`w-[300px] flex p-3   rounded-box justify-between flex-col bg-violet-100`}
-            >
-              <h2 className=" font-light text-2xl  tracking-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </h2>
-              <div className="w-full h-auto flex flex-col ">
-                <h1 className=" text-xl font-extrabold">Samir Baloushi</h1>
-                <p>Cloud Media</p>
+
+              <div className="w-full h-full overflow-hidden rounded-md">
+                <img
+                  src="/bg-city.jpg"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -507,18 +500,14 @@ export default function Home() {
         {/* End of testimonials */}
 
         {/* Start of contact form */}
-        <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
-          <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
-            <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row-  lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full lg:text-left   text-black">
-                Looking to take your business to the
-                <span className="underline underline-offset-3 decoration-8 decoration-violet-200">
-                  next level?
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Subheading
+          text={[
+            { text: "Ready to", underlined: false },
+            { text: "fuck", underlined: true },
+            { text: "shit up", underlined: false },
+            { text: "fuck", underlined: true },
+          ]}
+        />
         <div className="w-full h-full flex items-start justify-start flex-col lg:flex-row p-5 pt-10 lg:p-0 lg:py-10">
           <div className="w-full lg:w-1/2 h-full flex flex-col py-5 gap-3">
             <div>

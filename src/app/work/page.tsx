@@ -11,7 +11,7 @@ const Work = () => {
     <>
       <main className=" w-full h-auto lg:pl-[50px] lg:pr-[50px]">
         <Navbar />
-        <div className="w-full h-full flex flex-col lg:py-10">
+        <div className="w-full h-full flex flex-col lg:py-10 mt-10 lg:mt-0">
           <div className="w-full  flex flex-col items-center justify-start  lg:w-full lg:flex-row lg:gap-8">
             <div className="w-full h-full lg:w-1/2 lg:h-full flex-col flex justify-evenly gap-6">
               <h1 className="text-5xl text-center  font-semibold tracking-normal dark:text-white  lg:text-[60px] xl:text-[80px] 2xl:text-[130px] 3xl:text-[180px]  lg:text-left  ">
@@ -64,7 +64,7 @@ const Work = () => {
         <div className="w-full h-auto flex justify-center items-center flex-col p-5 pt-10 lg:p-0 lg:py-10 gap-10">
           <div className="w-full h-full flex flex-col gap-5 lg:flex-row lg:justify-start lg:items-start">
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row lg:w-1/2 lg:justify-start lg:items-start">
-              <h1 className="text-3xl  font-semibold lg:text-3xl lg:w-full   text-black">
+              <h1 className="text-2xl  font-semibold lg:text-3xl lg:w-full   text-black">
                 Weve developed
                 <span className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-violet-200">
                   specific use cases
@@ -94,11 +94,11 @@ const Work = () => {
                   className="w-full h-auto"
                 />
                 <div className="w-full h-auto flex flex-col gap-6">
-                  <h1 className="text-3xl font-extrabold ">
+                  <h1 className="text-xl font-extrabold lg:text-3xl">
                     E-commerce Trailblazer: Active Cores Success Unleashes
                     Six-Figure Triumph
                   </h1>
-                  <p className="text-lg font-normal text-black">
+                  <p className="text-sm font-normal text-black lg:text-lg">
                     Delving into the realms of e-commerce, Active Core emerged
                     as a powerhouse brand, orchestrating a remarkable success
                     story that unfolded into a substantial six-figure revenue.
