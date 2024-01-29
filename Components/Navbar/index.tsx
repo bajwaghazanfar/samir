@@ -5,6 +5,7 @@ import { Spin as Hamburger } from "hamburger-react";
 import logo from "../../public/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Merriweather } from "next/font/google";
+import DottedButton from "../Button/Button";
 
 export const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -70,9 +71,27 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-violet-200 " href="#ContactForm">
-          Book a Call
-        </a>
+        <DottedButton
+          animation={false}
+          inViewportView={false}
+          id="#ContactForm"
+        >
+          <p className="w-auto flex gap-2 ">
+            Book a call
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </p>
+        </DottedButton>
       </div>
     </div>
   );
