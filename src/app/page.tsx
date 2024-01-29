@@ -306,7 +306,11 @@ export default function Home() {
                   and ultimately, a{" "}
                   <span className="italic">stronger market presence</span>.
                 </p>
-                <DottedButton animation={true} inViewportView={true}>
+                <DottedButton
+                  animation={true}
+                  inViewportView={true}
+                  id="Services"
+                >
                   <p>Explore</p>
                 </DottedButton>
               </div>
@@ -339,7 +343,11 @@ export default function Home() {
                   consumer your brand requires – and imagine doing it
                   consistently around the clock.
                 </p>
-                <DottedButton animation={true} inViewportView={true}>
+                <DottedButton
+                  animation={true}
+                  inViewportView={true}
+                  id="Services"
+                >
                   <p>Explore</p>
                 </DottedButton>
               </div>
@@ -381,7 +389,11 @@ export default function Home() {
                   potent hub for business growth, illuminating your brand’s
                   offering at the click of a button.
                 </p>
-                <DottedButton animation={true} inViewportView={true}>
+                <DottedButton
+                  animation={true}
+                  inViewportView={true}
+                  id="Services"
+                >
                   <p>Explore</p>
                 </DottedButton>
               </div>
@@ -424,7 +436,11 @@ export default function Home() {
                   schedule a call with our founder and CEO Samir using the form
                   at the bottom of the page.
                 </p>
-                <DottedButton animation={true} inViewportView={true}>
+                <DottedButton
+                  animation={true}
+                  inViewportView={true}
+                  id="Services"
+                >
                   <p>Explore</p>
                 </DottedButton>
               </div>
