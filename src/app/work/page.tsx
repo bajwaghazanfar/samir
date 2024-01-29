@@ -25,8 +25,12 @@ const Work = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   </p>
                 </div>
-                <DottedButton>
-                  <p className="flex w-auto text-black gap-5">
+                <DottedButton
+                  animation={true}
+                  inViewportView={true}
+                  id="Services"
+                >
+                  <p className="flex w-auto text-white gap-5">
                     View Case Studies
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
