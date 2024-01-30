@@ -4,32 +4,22 @@ import daisyui from "daisyui"
 
 module.exports = {
   important:true,
-  daisyui: {
-    themes: [],
-  },
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
     extend: {
-      
       screens: {
         "3xl": "2000px",
       },
       colors: {
         "accent":"#64B5F6 "
-
       },
       fontFamily: {
-        fontFamily: {
-          fontFamily: {
                     "merriweather": "var(--font-merriweather)", // note: you can call the left side of this whatever you want - barlow-bold or title-font or foo-bar, this is what you'll use in your Tailwind css classes to use this font
                     "poppins": "var(--font-poppins)", // note: the bit that goes inside the var() function is the same variable name we defined in app.tsx
-                  }
-        },
       },
       backgroundImage: (theme) => ({
         abstract:
@@ -47,5 +37,13 @@ module.exports = {
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [require("daisyui")],
+    daisyui: {
+      styled: true,
+      themes: true,
+      base: true,
+      utils: true,
+      logs: true,
+      rtl: false
+    }
 };
