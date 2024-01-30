@@ -1,5 +1,6 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const withMT = require("@material-tailwind/react/utils/withMT");
+import daisyui from "daisyui"
 
 module.exports = {
   daisyui: {
@@ -18,15 +19,6 @@ module.exports = {
         "3xl": "2000px",
       },
       colors: {
-        "primary": "#ecfeff",
-        "primary-200": "#cffafe",
-        "primary-300": "#a5f3fc",
-        "primary-400": "#67e8f9",
-        "primary-500": "#38bdf8",
-        "primary-600": "#0ea5e9",
-        "primary-700": "#0e7490",
-        "primary-800": "#155e75",
-        "primary-900": "#164e63",
         "accent":"#64B5F6 "
 
       },
@@ -36,8 +28,6 @@ module.exports = {
                     "merriweather": "var(--font-merriweather)", // note: you can call the left side of this whatever you want - barlow-bold or title-font or foo-bar, this is what you'll use in your Tailwind css classes to use this font
                     "poppins": "var(--font-poppins)", // note: the bit that goes inside the var() function is the same variable name we defined in app.tsx
                   }
-
-
         },
       },
       backgroundImage: (theme) => ({
@@ -56,5 +46,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
 };
