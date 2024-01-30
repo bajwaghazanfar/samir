@@ -1,6 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
-const withMT = require("@material-tailwind/react/utils/withMT");
-import daisyui from "daisyui"
+
 
 module.exports = {
   important:true,
@@ -41,7 +39,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-
+    require('daisyui'),
   ],
     daisyui: {
       themes: [], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
