@@ -13,7 +13,7 @@ module.exports = {
         "3xl": "2000px",
       },
       colors: {
-        "secondary":"#64B5F6"
+        secondary:"#64B5F6"
       },
       fontFamily: {
                     "merriweather": "var(--font-merriweather)", // note: you can call the left side of this whatever you want - barlow-bold or title-font or foo-bar, this is what you'll use in your Tailwind css classes to use this font
