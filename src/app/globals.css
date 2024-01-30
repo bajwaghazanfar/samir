@@ -1,11 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-html {
+body {
 
   scroll-behavior: smooth;
   @media screen and (min-width: 1024px) and (max-width: 2600px) {
 background-color: white;
   }
 } 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
