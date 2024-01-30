@@ -1,10 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Spin as Hamburger } from "hamburger-react";
-import logo from "../../public/logo.png";
-import { motion, AnimatePresence } from "framer-motion";
-import { Merriweather } from "next/font/google";
+
 import DottedButton from "../Button/Button";
 
 export const Navbar = () => {

@@ -3,6 +3,7 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 import daisyui from "daisyui"
 
 module.exports = {
+  important:true,
   daisyui: {
     themes: [],
   },
