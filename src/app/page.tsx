@@ -118,36 +118,39 @@ export default function Home() {
                     className=" w-full h-full rounded-tl-full"
                   />
                 </div>
-                <div className="w-1/2 h-auto bg-gray-100 dark:bg-slate-900 flex flex-col p-5  gap-7 ">
-                  <h1 className="text-8xl">
-                    <Countup number={10} />
-                    m+
-                  </h1>
-                  <p>
-                    Social media impressions gained through paid and organic
-                    marketing methods done for our clients
-                  </p>
-                  <DottedButton
-                    animation={false}
-                    inViewportView={false}
-                    id="#Services"
-                  >
-                    <p className="w-auto flex gap-2 ">
-                      Learn More
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                <div className="w-1/2 h-auto     bg-gray-100 flex flex-col  gap-7 ">
+                  <div className="p-5 flex flex-col gap-5 px-10">
+                    {" "}
+                    <h1 className="text-8xl">
+                      <Countup number={10} />
+                      m+
+                    </h1>
+                    <p>
+                      Social media impressions gained through paid and organic
+                      marketing methods done for our clients
                     </p>
-                  </DottedButton>
+                    <DottedButton
+                      animation={false}
+                      inViewportView={false}
+                      id="#Services"
+                    >
+                      <p className="w-auto flex gap-2 ">
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </p>
+                    </DottedButton>
+                  </div>
                 </div>
               </motion.div>
 

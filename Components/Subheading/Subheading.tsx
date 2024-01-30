@@ -23,7 +23,7 @@ const Subheading: React.FC<Props> = ({ text }) => {
               map.underlined ? (
                 <span
                   key={index}
-                  className="ml-2 mr-2 underline underline-offset-3 decoration-8 decoration-secondary"
+                  className="ml-2 mr-2 underline underline-offset-3 decoration-8  decoration-cyan-600"
                 >
                   {map.text}
                 </span>
