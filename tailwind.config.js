@@ -15,7 +15,7 @@ module.exports = {
         "3xl": "2000px",
       },
       colors: {
-        "accent":"#64B5F6 "
+        "secondary":"#64B5F6 "
       },
       fontFamily: {
                     "merriweather": "var(--font-merriweather)", // note: you can call the left side of this whatever you want - barlow-bold or title-font or foo-bar, this is what you'll use in your Tailwind css classes to use this font
@@ -37,7 +37,12 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('daisyui'),
+  ],
     daisyui: {
       themes: [], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     base: true, // applies background color and foreground color for root element by default

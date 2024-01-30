@@ -203,7 +203,7 @@ export default function Home() {
           >
             <div className="stats shadow">
               <div className="stat">
-                <div className="stat-figure text-accent">
+                <div className="stat-figure text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -220,13 +220,13 @@ export default function Home() {
                 <div className="stat-title">
                   Total Revenue Generate For Clients
                 </div>
-                <div className="stat-value text-accent">
+                <div className="stat-value text-secondary">
                   £<Countup number={295000} />
                 </div>
               </div>
 
               <div className="stat">
-                <div className="stat-figure text-accent">
+                <div className="stat-figure text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -242,13 +242,13 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="stat-title">Website Visitors</div>
-                <div className="stat-value text-accent">
+                <div className="stat-value text-secondary">
                   <Countup number={500000} />+
                 </div>
               </div>
 
               <div className="stat">
-                <div className="stat-figure text-accent">
+                <div className="stat-figure text-secondary">
                   <div className="avatar online">
                     <div className="w-16 rounded-full">
                       <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -256,7 +256,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="stat-title">Followers Gained For Clients</div>
-                <div className="stat-value text-accent">
+                <div className="stat-value text-secondary">
                   <Countup number={700000} />+
                 </div>
               </div>
