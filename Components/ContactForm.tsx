@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
       >
         <div className="w-full lg:w-1/2 h-full flex flex-col py-5 gap-3 justify-between">
           <div className="w-full h-auto">
-            <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-accent">
+            <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-secondary">
               Schedule Your Free Audit Call With Samir
             </h4>
             <h3 className="text-2xl  font-bold lg:text-3xl lg:w-full lg:text-left   text-black">
@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
             We don’t pitch anything and everything you don’t need, we pitch
             <b> results</b> because ultimately, that’s what counts.
           </p>
-          <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-accent">
+          <h4 className="uppercase   font-extrabold lg:text-xl lg:w-full lg:text-left   text-secondary">
             This audit call is perfect for:
           </h4>
           {/* Start of ticks */}
@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 text-accent"
+                className="w-6 h-6 text-secondary"
               >
                 <path
                   fillRule="evenodd"
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 text-accent"
+                className="w-6 h-6 text-secondary"
               >
                 <path
                   fillRule="evenodd"
@@ -88,7 +88,7 @@ const ContactForm: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 text-accent"
+                className="w-6 h-6 text-secondary"
               >
                 <path
                   fillRule="evenodd"
@@ -111,7 +111,7 @@ const ContactForm: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 text-accent"
+                className="w-6 h-6 text-secondary"
               >
                 <path
                   fillRule="evenodd"
@@ -134,7 +134,7 @@ const ContactForm: React.FC = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 text-accent"
+                className="w-6 h-6 text-secondary"
               >
                 <path
                   fillRule="evenodd"

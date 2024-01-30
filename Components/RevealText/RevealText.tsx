@@ -4,7 +4,7 @@ type RevealTextProps = {
 };
 const RevealText: React.FC<RevealTextProps> = ({ lines }) => {
   return (
-    <div className="relative w-auto h-auto ">
+    <div className="relative w-full h-full ">
       {lines.map((map, index) => (
         <motion.h1
           key={index}
