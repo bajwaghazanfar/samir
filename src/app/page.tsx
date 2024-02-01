@@ -1,17 +1,14 @@
 "use client";
-import Image from "next/image";
+
 import DottedButton from "../../Components/Button/Button";
 import { Navbar } from "../../Components/Navbar";
-import ShuffleHero, {
-  ShuffleGrid,
-} from "../../Components/SquarePhotoGrid/SquarePhotoGrid";
-import CountUp from "react-countup";
+
 import { animate, color, motion, useInView } from "framer-motion";
 import Footer from "../../Components/Footer/Footer";
 import RevealText from "../../Components/RevealText/RevealText";
 import Subheading from "../../Components/Subheading/Subheading";
 import Countup from "../../Components/Countup/Countup";
-import { useEffect, useRef } from "react";
+
 import ContactForm from "../../Components/ContactForm";
 
 export default function Home() {
@@ -102,7 +99,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  bg-white overflow-hidden "
+              className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  bg-white  "
             >
               <motion.div
                 variants={childVariantsWithDelay}
@@ -115,12 +112,27 @@ export default function Home() {
                     muted
                     autoPlay
                     loop
-                    className=" w-full h-full rounded-tl-full"
+                    className=" w-full h-auto rounded-tl-full"
                   />
                 </div>
-                <div className="w-1/2 h-auto     bg-gray-100 flex flex-col  gap-7 ">
+
+                <div className="w-1/2 h-autobg-gray-100 flex flex-col  gap-7 indicator  ">
+                  <span className="indicator-item badge badge-secondary  z-50 w-fit h-fit p-5   rounded-full bg-secondary border-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-[50px] h-auto"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+
                   <div className="p-5 flex flex-col gap-5 px-10">
-                    {" "}
                     <h1 className="text-8xl">
                       <Countup number={10} />
                       m+
@@ -529,7 +541,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <DottedButton animation={false} inViewportView={false} id="#Services">
+        <DottedButton animation={false} inViewportView={false} id="">
           <p className=" text-white flex gap-5 text-xl">
             Swipe to view all testimonials
             <motion.svg
