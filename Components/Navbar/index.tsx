@@ -7,7 +7,7 @@ import DottedButton from "../Button/Button";
 export const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className="navbar bg-base-100 w-full">
+    <div className="navbar bg-base-100 w-full xl:pr-[50px] xl:pl-[50px]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

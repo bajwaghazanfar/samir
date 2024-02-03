@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="3xl:pl-[400px] 3xl:pr-[400px]">
       <body className={inter.className}>
         <ActiveCore />
       </body>

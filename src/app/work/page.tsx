@@ -14,7 +14,7 @@ const Work = () => {
         <div className="w-full h-full flex flex-col lg:py-10 mt-10 lg:mt-0">
           <div className="w-full  flex flex-col items-center justify-start  lg:w-full lg:flex-row lg:gap-8">
             <div className="w-full h-full lg:w-1/2 lg:h-full flex-col flex justify-evenly gap-6">
-              <h1 className="text-5xl text-center  font-semibold tracking-normal dark:text-white  lg:text-[60px] xl:text-[80px] 2xl:text-[130px] 3xl:text-[180px]  lg:text-left  ">
+              <h1 className="text-5xl text-center  font-semibold tracking-normal dark:text-white  lg:text-[60px] xl:text-[80px] 2xl:text-[130px] 2xl:text-[180px]  lg:text-left  ">
                 Transforming businesses one video at a time
               </h1>
               <div className="w-full flex items-center flex-col justify-center h-full gap-10 lg:w-4/5 lg:items-start  lg:justify-start ">

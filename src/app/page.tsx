@@ -45,7 +45,6 @@ export default function Home() {
   return (
     <>
       <main className=" w-full h-auto lg:pl-[50px] lg:pr-[50px] ">
-        <Navbar />
         <div className="w-full h-full flex flex-col lg:py-10 mt-10 lg:mt-0">
           <div className="w-full  flex flex-col items-center justify-start  lg:w-full lg:flex-row lg:gap-8">
             <div className="w-full h-full lg:w-1/2 lg:h-full flex-col flex justify-evenly gap-6">
@@ -99,7 +98,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  bg-white  "
+              className=" h-full hidden lg:block lg:flex- gap-5 lg:w-1/2 lg:gap-2  bg-white "
             >
               <motion.div
                 variants={childVariantsWithDelay}
@@ -116,7 +115,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="w-1/2 h-autobg-gray-100 flex flex-col  gap-7 indicator  ">
+                <div className="w-1/2 h-auto flex flex-col  gap-7 indicator    bg-gray-100">
                   <span className="indicator-item badge badge-secondary  z-50 w-fit h-fit p-5   rounded-full bg-secondary border-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +136,7 @@ export default function Home() {
                       <Countup number={10} />
                       m+
                     </h1>
-                    <p>
+                    <p className="2xl:text-xl">
                       Social media impressions gained through paid and organic
                       marketing methods done for our clients
                     </p>
@@ -199,7 +198,7 @@ export default function Home() {
             />
             <div className="w-full h-full flex flex-col justify-center  items-center gap-5 lg:flex-row ">
               <div className="w-auto h-auto   p-5  rounded-md">
-                <p className="text-md text-black  font-light tracking-wide ">
+                <p className="text-md text-black  font-light tracking-wide  2xl:text-lg">
                   Here’s the truth that nobody shares – there’s a proven formula
                   for value-based virality. However, without tailored systems
                   for your brand, all of those fancy strategies will most likely
@@ -502,7 +501,10 @@ export default function Home() {
               <a href="#slide1" className="btn btn-circle">
                 ❮
               </a>
-              <a href="#slide3" className="btn btn-circle">
+              <a
+                href="#slide3"
+                className="btn btn-circle border-2 border-solid border-red-900"
+              >
                 ❯
               </a>
             </div>
