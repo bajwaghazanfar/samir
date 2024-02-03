@@ -10,7 +10,6 @@ const Work = () => {
   return (
     <>
       <main className=" w-full h-auto lg:pl-[50px] lg:pr-[50px]">
-        <Navbar />
         <div className="w-full h-full flex flex-col lg:py-10 mt-10 lg:mt-0">
           <div className="w-full  flex flex-col items-center justify-start  lg:w-full lg:flex-row lg:gap-8">
             <div className="w-full h-full lg:w-1/2 lg:h-full flex-col flex justify-evenly gap-6">
