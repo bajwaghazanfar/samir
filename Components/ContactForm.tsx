@@ -4,7 +4,7 @@ const ContactForm: React.FC = () => {
       {" "}
       {/* Start of contact form */}
       <div
-        className="w-full h-full flex items-start justify-start flex-col lg:flex-row p-5 pt-10 lg:p-0 lg:py-10"
+        className="w-full h-auto flex items-start justify-start flex-col lg:flex-row p-5 pt-10 lg:p-0 lg:py-10"
         id="ContactForm"
       >
         <div className="w-full lg:w-1/2 h-full flex flex-col py-5 gap-3 justify-between">
@@ -155,7 +155,7 @@ const ContactForm: React.FC = () => {
         <div className="w-full h-full lg:w-1/2 flex items-center justify-start">
           <iframe
             src="https://calendly.com/samirbaloushi/1-on-1-meeting"
-            className=" flex-grow w-full h-screen"
+            className=" flex-grow w-full h-screen 3xl:h-[50vh]"
           />
         </div>
       </div>

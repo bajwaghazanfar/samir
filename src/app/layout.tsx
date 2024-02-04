@@ -23,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="3xl:pl-[400px] 3xl:pr-[400px]">
+    <html
+      lang="en"
+      className="3xl:pl-[400px] 3xl:pr-[400px] 4xl:pl-[700px] 4xl:pr-[700px] "
+    >
       <body className={`${poppins.className}  `}>
         <Navbar />
         {children}

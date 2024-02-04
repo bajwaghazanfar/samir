@@ -9,9 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        "3xl": "2000px",
-      },
       colors: {
         secondary:"#64B5F6"
       },
@@ -31,6 +28,7 @@ module.exports = {
       },
       screens: {
         "3xl": "2000px",
+        "4xl": "3000px",
         // => @media (min-width: 2000px) { ... }
       },
     },
