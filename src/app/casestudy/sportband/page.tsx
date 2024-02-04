@@ -6,6 +6,7 @@ import { Navbar } from "../../../../Components/Navbar";
 import Footer from "../../../../Components/Footer/Footer";
 import { motion } from "framer-motion";
 import Subheading from "../../../../Components/Subheading/Subheading";
+import ContactForm from "../../../../Components/ContactForm";
 
 const ActiveCore = () => {
   return (
@@ -180,6 +181,10 @@ const ActiveCore = () => {
               />
             </div>
           </div>
+        </div>
+
+        <div className=" w-full h-auto lg:pl-[50px] lg:pr-[50px] ">
+          <ContactForm />
         </div>
       </main>
       <Footer />

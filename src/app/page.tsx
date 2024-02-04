@@ -543,7 +543,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <DottedButton animation={false} inViewportView={false} id="">
+        {/* <DottedButton animation={false} inViewportView={false} id="">
           <p className=" text-white flex gap-5 text-xl">
             Swipe to view all testimonials
             <motion.svg
@@ -563,103 +563,92 @@ export default function Home() {
               />
             </motion.svg>
           </p>
-        </DottedButton>
+        </DottedButton> */}
 
-        <div className="carousel carousel-center w-full p-4 space-x-4 ">
-          <div className="carousel-item   rounded-lg shadow-lg p-3">
-            <div
-              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col   `}
-            >
-              <div className="w-full h-auto flex flex-col p-2 bg-white rounded-lg">
-                <div className="flex items-center mb-2">
-                  <h1 className="text-xl font-extrabold text-black">
-                    Samir Baloushi
+        <div className="carousel w-full">
+          <div id="testimonial_1" className="carousel-item w-full">
+            <div className="w-full h-auto flex flex-col items-center justify-center ">
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="w-full h-auto flex flex-col items-center justify-center lg:flex-row"
+              >
+                <motion.div
+                  variants={childVariants}
+                  className="w-full h-auto flex p-5 gap-5 flex-col items-start justify-start lg:w-1/2 lg:p-10"
+                >
+                  <h1 className="text-3xl   font-light lg:text-[40px] 2xl:text-[60px] text-left leading-none">
+                    ChatGPT is a game-changer! Its quick and accurate responses
+                    make it an invaluable tool for boosting productivity. Highly
+                    recommended!" <br /> <br />
+                    <span className="font-bold">
+                      - Samir Baloushi, CEO of Cloud Media
+                    </span>
                   </h1>
-                </div>
-                <p className="text-black mb-2">Cloud Media</p>
-                <div className=" p-3 rounded-md">
-                  <h2 className="font-light text-xl text-black tracking-normal">
-                    <span className="text-4xl text-black">"</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam
-                    <span className="text-4xl text-black">"</span>
-                  </h2>
-                </div>
-              </div>
-
-              <div className="w-full h-full overflow-hidden rounded-md">
-                <img
-                  src="/bg-city.jpg"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+                </motion.div>
+                <motion.div
+                  variants={childVariants}
+                  className="w-full relative h-auto flex p-5 gap-5 flex-col items-center justify-center lg:w-1/3 lg:justify-end lg:items-end"
+                >
+                  <img
+                    src="/p4.jpg"
+                    className="w-full h-auto rounded-m object-cover "
+                  />
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-
-          <div className="carousel-item   rounded-lg shadow-lg p-3">
-            <div
-              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col   `}
-            >
-              <div className="w-full h-auto flex flex-col p-2 bg-white rounded-lg">
-                <div className="flex items-center mb-2">
-                  <h1 className="text-xl font-extrabold text-black">
-                    Samir Baloushi
+          <div id="testimonial_2" className="carousel-item w-full">
+            <div className="w-full h-auto flex flex-col items-center justify-center ">
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="w-full h-auto flex flex-col items-center justify-center lg:flex-row"
+              >
+                <motion.div
+                  variants={childVariants}
+                  className="w-full h-auto flex p-5 gap-5 flex-col items-start justify-start lg:w-1/2 lg:p-10"
+                >
+                  <h1 className="text-3xl   font-light lg:text-[40px] 2xl:text-[60px] text-left leading-none">
+                    ChatGPT exceeded my expectations with its rapid, insightful
+                    responses. A must-have for anyone seeking efficiency and
+                    intelligence in virtual assistance <br /> <br />
+                    <span className="font-bold">
+                      - Akbar, CEO of Signature Touch
+                    </span>
                   </h1>
-                </div>
-                <p className="text-black mb-2">Cloud Media</p>
-                <div className=" p-3 rounded-md">
-                  <h2 className="font-light text-xl text-black tracking-normal">
-                    <span className="text-4xl text-black">"</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam
-                    <span className="text-4xl text-black">"</span>
-                  </h2>
-                </div>
-              </div>
-
-              <div className="w-full h-full overflow-hidden rounded-md">
-                <img
-                  src="/bg-city.jpg"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="carousel-item   rounded-lg shadow-lg p-3">
-            <div
-              className={`lg:w-[600px] lg:h-[600px] w-[400px] h-[400px] flex    rounded-md justify-start items-start flex-col   `}
-            >
-              <div className="w-full h-auto flex flex-col p-2 bg-white rounded-lg">
-                <div className="flex items-center mb-2">
-                  <h1 className="text-xl font-extrabold text-black">
-                    Samir Baloushi
-                  </h1>
-                </div>
-                <p className="text-black mb-2">Cloud Media</p>
-                <div className=" p-3 rounded-md">
-                  <h2 className="font-light text-xl text-black tracking-normal">
-                    <span className="text-4xl text-black">"</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam
-                    <span className="text-4xl text-black">"</span>
-                  </h2>
-                </div>
-              </div>
-
-              <div className="w-full h-full overflow-hidden rounded-md">
-                <img
-                  src="/bg-city.jpg"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+                </motion.div>
+                <motion.div
+                  variants={childVariants}
+                  className="w-full relative h-auto flex p-5 gap-5 flex-col items-center justify-center lg:w-1/3 lg:justify-end lg:items-end"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/1683492/pexels-photo-1683492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    className="w-full h-auto rounded-m object-cover "
+                  />
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </div>
-        {/* End of testimonials */}
+        <div className="flex justify-center w-full py-2 gap-2">
+          <a href="#testimonial_1" className="btn btn-xs">
+            1
+          </a>
+          <a href="#testimonial_2" className="btn btn-xs">
+            2
+          </a>
+          <a href="#item3" className="btn btn-xs">
+            3
+          </a>
+          <a href="#item4" className="btn btn-xs">
+            4
+          </a>
+        </div>
 
         <ContactForm />
       </main>

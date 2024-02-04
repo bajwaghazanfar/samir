@@ -7,6 +7,7 @@ import Footer from "../../../Components/Footer/Footer";
 import { motion } from "framer-motion";
 import RevealText from "../../../Components/RevealText/RevealText";
 import Subheading from "../../../Components/Subheading/Subheading";
+import ContactForm from "../../../Components/ContactForm";
 
 const Work = () => {
   return (
@@ -115,6 +116,7 @@ const Work = () => {
             </a>
           </div>
         </div>
+        <ContactForm />
       </main>
       <Footer />
     </>
